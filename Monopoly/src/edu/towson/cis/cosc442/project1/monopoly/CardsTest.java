@@ -3,10 +3,15 @@ package edu.towson.cis.cosc442.project1.monopoly;
 import junit.framework.TestCase;
 
 public class CardsTest extends TestCase {
-    Card ccCard, chanceCard;
+    Card ccCard;
+    Card  chanceCard;
     
     GameMaster gameMaster;
 
+    @Override
+    /**
+     * Executes setUp.
+     */
     protected void setUp() {
         gameMaster = GameMaster.instance();
         gameMaster.setGameBoard(new GameBoardCCGainMoney());
@@ -18,6 +23,9 @@ public class CardsTest extends TestCase {
         gameMaster.getGameBoard().addCard(ccCard);
     }
     
+    /**
+     * Executes testCardType.
+     */
     public void testCardType() {
         gameMaster.drawCCCard();
         assertEquals(Card.TYPE_CC, ccCard.getCardType());
