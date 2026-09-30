@@ -5,6 +5,7 @@ import junit.framework.TestCase;
 public class UtilityCellTest extends TestCase {
 	GameMaster gameMaster;
 	
+	@Override
 	protected void setUp() {
 		gameMaster = GameMaster.instance();
 		gameMaster.setGameBoard(new GameBoardUtility());
